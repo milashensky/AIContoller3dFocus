@@ -33,4 +33,8 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Perception")
 	FName SenseSocketBoneName;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
+	bool UseSenseSocket = true;
 };

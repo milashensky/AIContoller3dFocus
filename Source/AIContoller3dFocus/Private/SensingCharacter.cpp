@@ -3,6 +3,8 @@
 
 #include "SensingCharacter.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "AIController.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 ASensingCharacter::ASensingCharacter()
@@ -34,11 +36,16 @@ void ASensingCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& OutRotation) const
 {
+	if (!UseSenseSocket) {
+		Super::GetActorEyesViewPoint(OutLocation, OutRotation);
+		return;
+	}
 	if (SenseSocketBoneName == "") {
 		Super::GetActorEyesViewPoint(OutLocation, OutRotation);
 		return;
 	}
-	OutLocation = GetMesh()->GetSocketLocation(SenseSocketBoneName);
-	OutRotation = GetMesh()->GetSocketRotation(SenseSocketBoneName);
+	const  USkeletalMeshComponent* mesh = GetMesh();
+	OutLocation = mesh->GetSocketLocation(SenseSocketBoneName);
+	OutRotation = mesh->GetSocketRotation(SenseSocketBoneName);
 }
 
