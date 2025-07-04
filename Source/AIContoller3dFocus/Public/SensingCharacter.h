@@ -37,4 +37,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
 	bool UseSenseSocket = true;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
+	bool AdjustForInvalid = true;
 };

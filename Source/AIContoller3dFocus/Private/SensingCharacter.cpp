@@ -47,5 +47,23 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 	const  USkeletalMeshComponent* mesh = GetMesh();
 	OutLocation = mesh->GetSocketLocation(SenseSocketBoneName);
 	OutRotation = mesh->GetSocketRotation(SenseSocketBoneName);
-}
+	if (!AdjustForInvalid) {
+		return;
+	}
+	// sometime if character stands in place, AIController sets invalid focus position
+	// and with aim offset it might cause them to look at the sky wierdly.
+	AAIController* AIController = Cast<AAIController>(GetController());
+	FVector FocusLocation = AIController->GetFocalPoint();
+	if (AIController) {
+		if (
+			!AIController->GetFocusActor()
+			&& (
+				!FAISystem::IsValidLocation(FocusLocation)
+				|| !FAISystem::IsValidDirection(FocusLocation)
+			)
+		) {
+			OutRotation.Pitch = 0.f;
+		}
+	}
 
+}
