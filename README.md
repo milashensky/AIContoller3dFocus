@@ -10,3 +10,10 @@ provides:
 * `SensingCharacter`: a character with ability to define eyes view point socket by setting `Sense Socket Bone Name` in blueprints
 * `ClearAllTimers` util: clears all timers for the object
 * `DestroyAIController` util: allows to destroy ai controller. by default you not suppose to destroy the controller, but if you ain't planning on ressurecting the pawn after death, I don't see why not. unpossesses the pawn, clears timers, destroies the controller.
+
+### Installation
+
+* copy the plugin to the Engine's plugins folder (`Path\to\Engine\Plugins`)
+* add plugin to the project
+* ...
+* profit
