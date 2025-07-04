@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "AIContoller3dFocus",
+	"Description": "A custom AI Controller with pitch respect for focal point, even if focus is not a pawn.",
+	"Category": "AI",
+	"CreatedBy": "Alexandr Provornov",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.6.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "AIContoller3dFocus",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
