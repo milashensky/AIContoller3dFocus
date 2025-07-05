@@ -4,6 +4,7 @@
 #include "SensingCharacter.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "AIController.h"
+#include "AITypes.h"
 #include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
@@ -53,8 +54,8 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 	// sometime if character stands in place, AIController sets invalid focus position
 	// and with aim offset it might cause them to look at the sky wierdly.
 	AAIController* AIController = Cast<AAIController>(GetController());
-	FVector FocusLocation = AIController->GetFocalPoint();
-	if (AIController) {
+	if (IsValid(AIController)) {
+		FVector FocusLocation = AIController->GetFocalPoint();
 		if (
 			!AIController->GetFocusActor()
 			&& (
@@ -65,5 +66,4 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 			OutRotation.Pitch = 0.f;
 		}
 	}
-
 }
