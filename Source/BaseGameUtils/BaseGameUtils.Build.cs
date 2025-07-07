@@ -6,6 +6,15 @@ public class BaseGameUtils : ModuleRules
 {
 	public BaseGameUtils(ReadOnlyTargetRules Target) : base(Target)
 	{
+		if (
+			(Target.Platform == UnrealTargetPlatform.Linux)
+			|| (Target.Platform == UnrealTargetPlatform.Win64)
+		) {
+			PrecompileForTargets = PrecompileTargetsType.Any;
+		} else {
+			PrecompileForTargets = PrecompileTargetsType.None;
+		}
+		// PrecompileForTargets = PrecompileTargetsType.Any;
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicIncludePaths.AddRange(

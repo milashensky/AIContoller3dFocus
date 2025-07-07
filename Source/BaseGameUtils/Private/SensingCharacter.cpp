@@ -1,6 +1,3 @@
-#pragma once
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "SensingCharacter.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "AIController.h"
@@ -59,7 +56,7 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 		if (
 			!AIController->GetFocusActor()
 			&& (
-				!FAISystem::IsValidLocation(FocusLocation) 
+				!FAISystem::IsValidLocation(FocusLocation)
 				|| !FAISystem::IsValidDirection(FocusLocation)
 			)
 		) {
@@ -67,4 +64,3 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 		}
 	}
 }
-
