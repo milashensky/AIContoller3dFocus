@@ -8,10 +8,10 @@
 #include "GameTimersUtils.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
-class AICONTOLLER3DFOCUS_API UGameTimersUtils : public UBlueprintFunctionLibrary
+class BASEGAMEUTILS_API UGameTimersUtils : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

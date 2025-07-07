@@ -8,7 +8,7 @@
  *
  */
 UCLASS()
-class AICONTOLLER3DFOCUS_API AAIController3dFocus : public AAIController
+class BASEGAMEUTILS_API AAIController3dFocus : public AAIController
 {
 	GENERATED_BODY()
 

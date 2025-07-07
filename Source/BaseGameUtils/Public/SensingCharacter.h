@@ -7,7 +7,7 @@
 #include "SensingCharacter.generated.h"
 
 UCLASS()
-class AICONTOLLER3DFOCUS_API ASensingCharacter : public ACharacter
+class BASEGAMEUTILS_API ASensingCharacter : public ACharacter
 {
 	GENERATED_BODY()
 

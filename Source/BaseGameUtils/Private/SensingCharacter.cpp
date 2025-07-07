@@ -59,7 +59,7 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 		if (
 			!AIController->GetFocusActor()
 			&& (
-				!FAISystem::IsValidLocation(FocusLocation)
+				!FAISystem::IsValidLocation(FocusLocation) 
 				|| !FAISystem::IsValidDirection(FocusLocation)
 			)
 		) {
@@ -67,3 +67,4 @@ void ASensingCharacter::GetActorEyesViewPoint(FVector& OutLocation, FRotator& Ou
 		}
 	}
 }
+

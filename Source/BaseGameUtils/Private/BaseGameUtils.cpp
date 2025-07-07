@@ -1,15 +1,15 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "AIContoller3dFocusModule.h"
+#include "BaseGameUtils.h"
 
-#define LOCTEXT_NAMESPACE "FAIContoller3dFocusModule"
+#define LOCTEXT_NAMESPACE "FBaseGameUtilsModule"
 
-void FAIContoller3dFocusModule::StartupModule()
+void FBaseGameUtilsModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 }
 
-void FAIContoller3dFocusModule::ShutdownModule()
+void FBaseGameUtilsModule::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
@@ -17,4 +17,4 @@ void FAIContoller3dFocusModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FAIContoller3dFocusModule, AIContoller3dFocus)
+IMPLEMENT_MODULE(FBaseGameUtilsModule, BaseGameUtils)

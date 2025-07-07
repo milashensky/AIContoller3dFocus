@@ -4,7 +4,7 @@
 
 #include "Modules/ModuleManager.h"
 
-class FAIContoller3dFocusModule : public IModuleInterface
+class FBaseGameUtilsModule : public IModuleInterface
 {
 public:
 

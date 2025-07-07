@@ -1,8 +1,6 @@
-# AIContoller3dFocus
+# BaseGameUtils
 
 a plugin for Unreal Engine 5.6 with a bunch of classes and utilities. can't be bothered to do the same scaffolding for every project :)
-
-originally was build only for a single purpose, so name is not really appropriate. too bad...
 
 provides:
 
@@ -13,7 +11,7 @@ provides:
 
 ### Installation
 
-* copy the plugin to the Engine's plugins folder (`Path\to\Engine\Plugins`)
+* copy the plugin to the Engine's Plugins/Marketplace folder (`Path/to/Engine/Plugins/Marketplace`)
 * add plugin to the project
 * ...
 * profit
